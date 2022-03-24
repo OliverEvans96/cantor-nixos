@@ -19,3 +19,8 @@ and then
 cantor
 ```
 
+## References
+
+Inspired by:
+- https://www.reddit.com/r/NixOS/comments/tl4hm7/cantor_on_nixos/
+- https://nix-tutorial.gitlabpages.inria.fr/nix-tutorial/notebook.html
