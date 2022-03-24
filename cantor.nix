@@ -15,7 +15,7 @@
   callPackage
 }:
 let
-  analitza = callPackage ./analitza.nix {};
+  # analitza = callPackage ./analitza.nix {};
 in
 stdenv.mkDerivation {
   pname = "cantor";
@@ -28,11 +28,10 @@ stdenv.mkDerivation {
 
   nativeBuildInputs = [ extra-cmake-modules python shared-mime-info libsForQt5.qt5.wrapQtAppsHook ];
   buildInputs = [
-    analitza
+    # analitza
     libspectre
     libqalculate
     luajit
-    R
     sagemath
     libsForQt5.kpty
     libsForQt5.ktexteditor
