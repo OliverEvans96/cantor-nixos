@@ -40,6 +40,7 @@ But when I actually try to execute a cell, I just see an undescriptive error mes
 
 ```
 The sage process exited while evaluating this expression
+The last output was:
 ```
 
 ![sage exited](screenshots/error.png)
