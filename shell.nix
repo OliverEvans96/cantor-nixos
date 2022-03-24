@@ -15,8 +15,9 @@ mkShell {
   buildInputs = [
     cantor
     pythonDeps
-    sage
+    sagemath
     maxima
     octave
+    luajit
   ];
 }
