@@ -12,12 +12,7 @@ Unfortunately, it's not working for me with Sage for some reason, but the others
 To run cantor together with several backends, just run
 
 ```
-nix-shell
-```
-
-and then
-```
-cantor
+nix-shell --run cantor
 ```
 
 ### Cantor-only
@@ -28,11 +23,28 @@ To build cantor without the backends, run
 nix-build build.nix
 ```
 
-and then
+and then run via
 
 ```
 ./result/bin/cantor
 ```
+
+
+## Error with Sage Backend
+
+The Sage appears to be detected when run from the `nix-shell`
+
+![sage is detected](screenshots/found.png)
+
+But when I actually try to execute a cell, I just see an undescriptive error message
+
+```
+The sage process exited while evaluating this expression
+```
+
+![sage exited](screenshots/error.png)
+
+
 
 ## References
 
