@@ -7,32 +7,37 @@
   extra-cmake-modules,
   python,
   luajit,
-  xorg,
-  sagemath,
+  R,
   shared-mime-info,
   cmake,
   fetchurl,
-  callPackage
+  callPackage,
 }:
 let
-  # analitza = callPackage ./analitza.nix {};
+  analitza = callPackage ./analitza.nix {};
+  version = "21.12.2";
 in
 stdenv.mkDerivation {
   pname = "cantor";
-  version = "21.12.2";
+  version = version;
 
   src = fetchurl {
-    url = "https://download.kde.org/stable/release-service/21.12.2/src/cantor-21.12.2.tar.xz";
+    url = "https://download.kde.org/stable/release-service/${version}/src/cantor-${version}.tar.xz";
     sha256 = "e85c356bf91896f56a4759270e45c202dd956a557b252772f18338fadaf6086f";
   };
 
-  nativeBuildInputs = [ extra-cmake-modules python shared-mime-info libsForQt5.qt5.wrapQtAppsHook ];
+  nativeBuildInputs = [
+    extra-cmake-modules
+    shared-mime-info
+    libsForQt5.qt5.wrapQtAppsHook
+    python
+    luajit
+    R
+  ];
   buildInputs = [
-    # analitza
+    analitza
     libspectre
     libqalculate
-    luajit
-    sagemath
     libsForQt5.kpty
     libsForQt5.ktexteditor
     libsForQt5.knewstuff
