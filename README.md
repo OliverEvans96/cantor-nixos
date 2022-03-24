@@ -9,7 +9,8 @@ Unfortunately, it's not working for me with Sage for some reason, but the others
 
 ## Instructions
 
-Just run
+To run cantor together with several backends, just run
+
 ```
 nix-shell
 ```
@@ -17,6 +18,20 @@ nix-shell
 and then
 ```
 cantor
+```
+
+### Cantor-only
+
+To build cantor without the backends, run
+
+```
+nix-build build.nix
+```
+
+and then
+
+```
+./result/bin/cantor
 ```
 
 ## References
